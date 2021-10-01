@@ -1,0 +1,39 @@
+# corefs configuration
+[Distribution]
+Distribution=fedora
+Release=34
+
+[Output]
+Bootable=yes
+BootProtocols=uefi
+Format=gpt_btrfs
+Hostname=corefs_2109
+Output=corefs_2109.img
+OutputDir=mkosi.output/2109
+WithUnifiedKernelImages=no
+
+[Packages]
+Cache=../__sharedCache__
+Packages=
+	btrfs-progs
+	dmidecode
+	htop
+	openssh-server
+	passwd
+	procps-ng
+	shadow-utils
+	systemd-networkd
+	usbutils
+	wget
+	zstd
+
+[Partitions]
+RootSize=2G
+SwapSize=2G
+
+[Validation]
+BMap=yes
+CheckSum=yes
+Sign=no
+Key=boxos_signature
+Password=changeme
