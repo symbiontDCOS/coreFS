@@ -14,4 +14,4 @@ dist:
 
 clean:
 	mkosi clean
-	rm -rf mkosi.output/
+	rm -rf mkosi.output/*
