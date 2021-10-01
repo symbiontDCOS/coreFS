@@ -1,0 +1,4 @@
+Welcome to CoreFS!!
+
+RootFS image repository: /srv/images
+Run corectl --help for more info.
