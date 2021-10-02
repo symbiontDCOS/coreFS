@@ -9,8 +9,7 @@ image:
 	mkosi 
 
 dist:
-	btrfs property set ${outdir}/${output} ro true
-	btrfs send ${outdir}/${output} | zstd -vo ${outdir}/${output}.stream.zstd
+	cat ${outdir}/${output} | zstd -vo ${outdir}/${output}.stream.zstd
 
 clean:
 	mkosi clean
